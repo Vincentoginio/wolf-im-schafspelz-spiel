@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Wolf im Schafspelz</title>
+<meta name="description" content="Ein Hirtenspiel: Schafe einsammeln, den getarnten Wolf entlarven und durch den dunklen Wald zum Hochsitz der Jäger fliehen.">
+<meta name="theme-color" content="#11170e">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@700;900&family=Alegreya+Sans:wght@400;700;800&display=swap">
+<style>
+/* Layout: one dusk-lit column; title over a quiet meadow horizon, two play cards below */
+:root{
+  --night:#11170e;--panel:rgba(17,23,14,.88);--line:rgba(244,240,230,.16);
+  --wool:#f4f0e6;--muted:#b8b9a4;--moss:#93b35c;--lantern:#f0a93b;
+  --display:"Grenze Gotisch","Iowan Old Style",Georgia,serif;
+  --body:"Alegreya Sans","Segoe UI",system-ui,sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{min-height:100%}
+body{margin:0;min-height:100%;background:radial-gradient(ellipse at 50% 120%,#3d5a2a 0%,#1d2a15 45%,var(--night) 75%);color:var(--wool);font-family:var(--body);font-size:17px;line-height:1.5}
+main{max-width:46rem;margin:0 auto;padding:clamp(28px,7vw,72px) 16px 48px}
+.eyebrow{margin:0 0 .4rem;font-size:.8rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--lantern)}
+h1{font-family:var(--display);font-weight:900;font-size:clamp(3rem,11vw,6.4rem);line-height:.86;margin:0 0 1rem;text-wrap:balance}
+h1 span{display:block;font-size:.42em;font-weight:700;color:var(--muted);margin:.12em 0 .02em .08em}
+h1 em{font-style:normal;color:var(--lantern)}
+.lead{max-width:34rem;color:#dcd9c9;margin:0 0 2rem}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:14px;margin-bottom:2rem}
+.card{display:flex;flex-direction:column;gap:.5rem;padding:20px;border-radius:16px;border:1px solid var(--line);background:var(--panel);text-decoration:none;color:inherit;min-width:0;transition:transform .15s,border-color .15s}
+.card:hover,.card:focus-visible{transform:translateY(-2px);border-color:var(--lantern);outline:none}
+.card.rec{border-color:var(--lantern);box-shadow:0 0 0 1px var(--lantern) inset}
+.card h2{font-family:var(--display);font-size:2rem;font-weight:700;margin:0;line-height:1}
+.card p{margin:0;color:var(--muted);font-size:.95rem}
+.card .go{margin-top:auto;align-self:flex-start;padding:.6rem 1.1rem;border-radius:10px;background:var(--lantern);color:#1d1408;font-weight:800}
+.badge{align-self:flex-start;font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#1d1408;background:var(--moss);border-radius:999px;padding:.15rem .6rem}
+.badge[hidden]{display:none}
+section{border-top:1px solid var(--line);padding-top:1.4rem;margin-top:1.4rem}
+section h3{font-family:var(--display);font-size:1.5rem;margin:0 0 .5rem}
+ul{margin:0;padding-left:1.2rem;color:#dcd9c9}
+li{margin:.25rem 0}
+a.dl{color:var(--lantern);font-weight:700}
+.fine{font-size:.85rem;color:var(--muted)}
+</style>
+</head>
+<body>
+<main>
+  <p class="eyebrow">Ein Hirtenspiel aus dem Tal Grünau</p>
+  <h1>Wolf <span>im</span><em>Schafspelz</em></h1>
+  <p class="lead">Sammle deine Schafe ein, finde seltene Gadgets in der Wolle und schalte neue Hirten frei. Doch eines der Schafe ist ein Wolf. Wenn du ihn erwischst, beginnt die Flucht durch den dunklen Wald bis zum Hochsitz der Jäger.</p>
+
+  <div class="cards">
+    <a class="card" id="cardMobile" href="mobil.html">
+      <span class="badge" id="recMobile" hidden>Empfohlen für dein Gerät</span>
+      <h2>Handy &amp; iPad</h2>
+      <p>Touch-Steuerung mit Daumen-Joystick, großen Knöpfen und Zielhilfe. Zum Laufen das Gerät quer halten.</p>
+      <span class="go">Jetzt spielen</span>
+    </a>
+    <a class="card" id="cardDesktop" href="spiel.html">
+      <span class="badge" id="recDesktop" hidden>Empfohlen für dein Gerät</span>
+      <h2>Computer</h2>
+      <p>Volle Grafik mit dichterem Wald. Steuerung mit Tastatur und Maus.</p>
+      <span class="go">Jetzt spielen</span>
+    </a>
+  </div>
+
+  <section>
+    <h3>Steuerung am Computer</h3>
+    <ul>
+      <li><b>Weide:</b> WASD oder Klick zum Laufen, Q für die Fähigkeit, E an der Hütte, G für die Gadget-Tasche, T für die Tageszeit.</li>
+      <li><b>Flucht:</b> WASD laufen, Maus umschauen, Leertaste springen, Shift sprinten, Q Fähigkeit, E Gadget, Klick oder F schießen.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Zum Mitnehmen</h3>
+    <p>Beide Versionen sind einzelne Dateien und laufen auch ohne Internet im Browser: <a class="dl" href="mobil.html" download="Wolf-im-Schafspelz-Mobil.html">Handy-Version laden</a> · <a class="dl" href="spiel.html" download="Wolf-im-Schafspelz.html">Computer-Version laden</a></p>
+    <p class="fine">Dein Spielstand bleibt in deinem Browser gespeichert. Auf iPad und iPhone die Datei nicht in der Vorschau öffnen, sondern im Browser.</p>
+  </section>
+</main>
+<script>
+(function(){
+  var touch=(window.matchMedia&&matchMedia('(pointer: coarse)').matches)||('ontouchstart' in window)||navigator.maxTouchPoints>0;
+  var id=touch?'Mobile':'Desktop';
+  document.getElementById('card'+id).classList.add('rec');
+  document.getElementById('rec'+id).hidden=false;
+})();
+</script>
+</body>
+</html>
